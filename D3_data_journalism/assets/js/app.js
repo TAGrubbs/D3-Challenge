@@ -79,9 +79,6 @@ d3.csv("assets/data/data.csv")
       return xLinearScale(d.poverty);
     })
     .attr("dy", function(d) {
-      // When the size of the text is the radius,
-      // adding a third of the radius to the height
-      // pushes it into the middle of the circle.
       return yLinearScale(d.healthcare) + 3;
     })
     .attr("font-size", 9)
@@ -99,7 +96,7 @@ d3.csv("assets/data/data.csv")
       toolTip.hide(d);
       // Remove highlight
       d3.select("." + d.abbr).style("stroke", "#e3e3e3");
-    });
+    }); 
     // Step 6: Initialize tool tip
     // ==============================
     var toolTip = d3.tip()
